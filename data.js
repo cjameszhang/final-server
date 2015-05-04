@@ -4,8 +4,8 @@ var Professor = require('./models/professor')
 var classes = require('./data/classes.json');
 var professors = require('./data/professors.json');
 
-mongoose.connect('mongodb://localhost/final');
-//mongoose.connect('mongodb://cs498:final@ds031792.mongolab.com:31792/final');
+//mongoose.connect('mongodb://localhost/final');
+mongoose.connect('mongodb://cs498:final@ds031792.mongolab.com:31792/final');
 
 mongoose.connection.on('connected', function() {
   console.log('connected to database');
@@ -13,7 +13,7 @@ mongoose.connection.on('connected', function() {
   // add classes to database
   for (var i = 0; i < classes.length; i++) {
     var item = classes[i];
-    var obj = new Class({ _id: item.id, name: item.name, description: item.description });
+    var obj = new Class({ _id: item._id, name: item.name });
     obj.save(callback);
   }
 
