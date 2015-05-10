@@ -5,6 +5,124 @@
 @import "mixins";
 @import "base";
 
+#course-details {
+  background: transparent;
+
+  h1 {
+    margin: 0;
+    padding: 0;
+  }
+
+  #average-rating a {
+    background: #888;
+  }
+
+  a.button {
+    //font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    padding: 8px 16px;
+    //padding: 8px 16px;
+  }
+
+  #course-details-heading {
+    margin-top: 1rem;
+    .columns {
+      //margin-top: 1rem;
+    }
+  }
+
+  #course-rating-info {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    a.button { margin: 0; }
+    #add-review { margin-left: 0.5rem; }
+  }
+
+  #course-ratings {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 0.5rem;
+    .right ul:last-child {
+      //margin-right: 0;
+    }
+    ul { display: inline-block; margin: 0 0.5rem; }
+    li { margin: 0; }
+    a.button {
+      cursor: default;
+      background: #888;
+      padding: 8px 16px;
+      margin-bottom: 0.5rem;
+      //border-color: #94A1B4;
+    }
+  }
+
+  .course-review-scoring {
+    a {
+      @include transition(color 0.2s);
+      color: #ccc;
+    }
+    a:hover { color: #999; }
+    a.selected { color: #666; }
+  }
+
+  .course-review {
+    margin: 1rem 0;
+    border-radius: 4px;
+    background: #eee;
+    overflow: hidden;
+
+    a.button {
+      margin-top: 0;
+      background: #888;
+      cursor: default;
+    }
+
+    h3 {
+      vertical-align: bottom;
+    }
+  }
+
+  .review-score {
+    font-size: 1.5rem;
+  }
+  
+  .review-comments {
+    //background: #ddd;
+
+    input {
+      background: transparent;
+      margin: 0;
+      outline: 0;
+      border: none;
+      box-shadow: none;
+    }
+  }
+  .review-comments-list {
+    border-top: 1px solid #ccc;
+
+    div:last-child {
+      padding-bottom: 4px;
+      border-bottom: 1px solid #ccc;
+    }
+
+    div:first-child {
+      padding-top: 4px;
+    }
+
+    margin: 4px 8px 0;
+  }
+
+  .review-comment {
+    //margin: 0 8px;
+  }
+}
+
 .login {
   font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
   position: relative;

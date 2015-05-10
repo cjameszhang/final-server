@@ -43,6 +43,7 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
 
   AuthService.getUser(function (data) {
     $scope.currentUser = data._id;
+    $scope.currentUserName = data.name;
   });
 
   CourseService.getById(id)
@@ -142,7 +143,7 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
             review.commentList.forEach(function (comment, j) {
               userList.push(getUser(comment, function (user) {
 console.log(user);
-                $scope.reviews[i].commentList[j].username = user[0].facebookId; //TODO: change form facebookId to name
+                $scope.reviews[i].commentList[j].username = user[0].name; //TODO: change form facebookId to name
               }));
             });
           }
@@ -164,9 +165,12 @@ console.log(commentList.length);
     ReviewService.updateByObj(review)
       .then(function (res) {
         console.log(res.data.data);
+        if (doUpdates()) {
         $scope.reviews[index] = res.data.data;
         getVotes();
         retrieveComments();
+
+        }
       });
   }
 
@@ -205,8 +209,15 @@ console.log(commentList.length);
       .then(function (res) {
         var commentId = res.data.data._id;
 
-        $scope.reviews[index].comments.push(commentId);
-        updateReview(index);
+
+        // NEW THING LOCAL CHANGE
+        var dfdf = comment;
+        dfdf.username = $scope.currentUserName;
+        //$scope.reviews[index].commentList[j].username = user.facebookId; //TODO: change form facebookId to name
+        $scope.reviews[index].commentList.push(dfdf);
+
+        //$scope.reviews[index].comments.push(commentId);
+        //updateReview(index);
       });
 
   }
@@ -215,7 +226,7 @@ console.log(commentList.length);
     if (typeof $scope.currentUser != 'undefined' && $scope.reviews[index].userInput.length > 0) {
       console.log(index + ': ' + $scope.reviews[index].userInput);
       createComment(index, $scope.reviews[index].userInput);
-      retrieveComments();
+      if (doUpdates()) retrieveComments();
     } else {
       //TODO: handle unauthorized
     }
@@ -403,14 +414,21 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
       });
   }
 
+  function doUpdates() {
+    return false;
+  }
+
   function updateReview(index) {
     var review = $scope.reviews[index];
     ReviewService.updateByObj(review)
       .then(function (res) {
         console.log(res.data.data);
-        $scope.reviews[index] = res.data.data;
-        getVotes();
-        retrieveComments();
+
+        if (doUpdates()) {
+          $scope.reviews[index] = res.data.data;
+          getVotes();
+          retrieveComments();
+        }
       });
   }
 
@@ -450,7 +468,14 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
         var commentId = res.data.data._id;
 
         $scope.reviews[index].comments.push(commentId);
-        updateReview(index);
+
+        // NEW THING LOCAL CHANGE
+        var dfdf = comment;
+        dfdf.username = $scope.currentUserName;
+        //$scope.reviews[index].commentList[j].username = user.facebookId; //TODO: change form facebookId to name
+        $scope.reviews[index].commentList.push(dfdf);
+
+        if (doUpdates()) updateReview(index);
       });
 
   }
@@ -483,7 +508,7 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
       $scope.reviews[index].downvotes.splice(j, 1);
     }
 
-    getVotes();
+    if (doUpdates()) getVotes();
     updateReview(index);
   };
 
@@ -505,7 +530,7 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
       $scope.reviews[index].upvotes.splice(j, 1);
     }
 
-    getVotes();
+    if (doUpdates()) getVotes();
     updateReview(index);
   };
 
@@ -746,7 +771,12 @@ appControllers.controller('SideBarController', ['$scope', '$q', '$http', '$route
   });
 
   $scope.logout = function() {
-    AuthService.logout();
+    AuthService.logout(function() {
+
+  AuthService.getUser(function (data) {
+    $scope.currentUser = data;
+  });
+    });
   }
 
 }]);

@@ -1,43 +1,57 @@
-<div class="row backgrounddetaildiv">
-    <h1 class="pageheaderwords">{{course.name}}</h1>
-    <a ng-href="#/review/course/{{course._id}}">Add a review</a>
-
-    <p>Average Rating: {{ratingAverage | number:2}}</p>
-
-    <div ng-repeat="rating in topProfs | orderBy: 'rating.rating'">
-        <h4>{{rating.name}}</h4>
-
-        <p>{{rating.rating | number:2}}</p>
+<div class="row backgrounddetaildiv" id="course-details">
+    <div id="course-details-heading" class="row">
+        <div class="small-12 columns">
+            <h1 class="pageheaderwords text-center">
+                {{course.name}}
+            </h1>
+        </div>
     </div>
 
-    <div ng-repeat="review in reviews" class="individualreviewwrapper">
+    <div id="course-rating-info" class="button-bar text-center">
+        <ul id="average-rating" class="button-group radius">
+            <li><a class="button">Average Rating</a></li><li><a class="button">{{ratingAverage | number:1}}</a></li>
+        </ul>
+        <ul class="button-group radius">
+            <li><a ng-href="#/review/course/{{course._id}}" id="add-review" class="button submitbutton">Add review</a></li>
+        </ul>
+    </div>
+
+    <div id="course-ratings" class="text-center">
+            <ul class="button-group radius" ng-repeat="rating in topProfs | orderBy: 'rating'">
+                <li><a class="button">{{rating.name}}</a></li><li><a class="button">{{rating.rating | number:1}}</a></li>
+            </ul>
+    </div>
+
+    <div class="course-review" ng-repeat="review in reviews">
         <div class="row">
 
-            <div class="small-1 columns">
-                {{review.rating | number:2}}
-
-                <p>{{review.votes}}</p>
-                <a ng-click="upvote($index)"><i class="fa fa-angle-up fa-3x"></i></a>
+            <div class="course-review-scoring small-2 medium-1 columns text-center">
+                <a ng-click="upvote($index)"><i class="fa fa-angle-up fa-3x"></i></a><br>
+                <span class="review-score">{{review.votes}}</span><br>
                 <a ng-click="downvote($index)"><i class="fa fa-angle-down fa-3x"></i></a>
             </div>
-            <div class="small-11 columns">
-                <h3>{{review.title}}</h3>
+            <div class="small-10 medium-11 columns">
+                <h3>
+                    <a class="button">{{review.rating | number:1}}</a>
+                    {{review.title}}
+                </h3>
 
                 <p>{{review.body}}</p>
             </div>
         </div>
 
-        <div class="row">
+        <div class="row review-comments">
             <div class="small-12 columns">
-                <p>Comments:</p>
-                <div ng-repeat="comment in review.commentList">
-                    <strong>{{comment.username}}</strong>: {{comment.body}}
+                <div class="review-comments-list">
+                    <div ng-repeat="comment in review.commentList" class="review-comment">
+                        <strong>{{comment.username}}</strong>: {{comment.body}}
+                    </div>
                 </div>
+            </div>
 
                 <form ng-submit="submitComment($index)">
                     <input placeholder="Add a comment..." type="text" name="comment" maxlength="75" ng-model="review.userInput"/>
                 </form>
-            </div>
         </div>
     </div>
 </div>
