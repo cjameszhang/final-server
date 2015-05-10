@@ -9,13 +9,36 @@
     <style>
     @import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
     @import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
-    html { background: url(http://s.cdpn.io/6035/fb_login_bg.png) repeat; }
+    @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+    @import url(http://fonts.googleapis.com/css?family=Arizonia);
+    html {
+        background: url(http://s.cdpn.io/6035/fb_login_bg.png) repeat;
+    }
     body {
         background: #ccc;
     }
-    .backgroundimage {
+    img.bg {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
 
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
     }
+
+    @media screen and (max-width: 1024px) { /* Specific to this particular image */
+        img.bg {
+            left: 50%;
+            margin-left: -512px;   /* 50% */
+        }
+    }
+
     .wordsontop {
         width: 800px;
         height: 200px;
@@ -84,51 +107,6 @@
     }
     .login:active {
     }
-
-    .search-box {
-            width: 400px;
-            margin: 0 auto;
-        }
-    .search-box input {
-            width: 400px;
-            height: 2.5rem;
-            box-sizing: border-box;
-            background: rgba(255, 255, 255, 0.8);
-            border-radius: 4px;
-            border: none;
-            font-size: 1rem;
-            outline: 0;
-            padding: 0.5rem 0.625rem;
-        }
-    .search-box ul {
-            margin: 0;
-            padding: 0;
-            border-radius: 4px;
-            margin-top: 4px;
-            //border: 1px solid gray;
-            overflow: hidden;
-            background: rgba(255, 255, 255, 0.8);
-        }
-    .search-box ul li {
-            margin: 0;
-            list-style-type: none;
-        }
-    .search-box a {
-            display: block;
-            padding: 2px 8px;
-            color: gray;
-        }
-    .search-box li:first-child a { padding-top: 4px; }
-    .search-box li:nth-last-child(2) a { padding-bottom: 4px; }
-
-    .search-box a:hover {
-            background: #48f;
-            color: white;
-        }
-
-    .search-no-results {
-            padding: 0 8px;
-        }
     </style>
 </head>
 

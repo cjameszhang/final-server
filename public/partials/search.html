@@ -1,9 +1,18 @@
-<div class="search-box">
-    <input ng-model="query" placeholder="Search" ng-keydown="keyPress($event)">
-    <ul ng-show="query != ''">
-        <li ng-repeat="course in filteredCourses = (courses | filter:{name:query} | orderBy:'name' | limitTo:4)">
-            <a ng-bind="course.name" ng-href="#/course/{{course._id}}"></a>
-        </li>
-        <li class="search-no-results" ng-hide="filteredCourses.length">No results</li>
-    </ul>
+<img src="../images/Background-Image-Color-Overlay.jpg" class="bg">
+<div class="pagewrapper row small-12">
+    <div class="searchboxwrapper">
+        <div class="titles-of-page">
+            <h1 class="searchpagetitle1">COURSE REVIEWS MADE EASY</h1>
+            <h2 class="searchpagetitle2">validate your favorite professors, bash your worst nightmares</h2>
+        </div>
+        <div class="search-box small-centered">
+            <input ng-model="query" placeholder="Search by course name or number..." ng-keydown="keyPress($event)">
+            <ul ng-show="query != ''">
+                <li ng-repeat="course in filteredCourses = (courses | filter:{name:query} | orderBy:'name' | limitTo:4)">
+                    <a ng-bind="course.name" ng-href="#/course/{{course._id}}"></a>
+                </li>
+                <li class="search-no-results" ng-hide="filteredCourses.length">No results</li>
+            </ul>
+        </div>
+    </div>
 </div>
