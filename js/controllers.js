@@ -141,7 +141,8 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
             console.log(review.commentList);
             review.commentList.forEach(function (comment, j) {
               userList.push(getUser(comment, function (user) {
-                $scope.reviews[i].commentList[j].username = user.facebookId; //TODO: change form facebookId to name
+console.log(user);
+                $scope.reviews[i].commentList[j].username = user[0].facebookId; //TODO: change form facebookId to name
               }));
             });
           }
