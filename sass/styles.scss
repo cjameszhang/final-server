@@ -4,3 +4,81 @@
 @import "variables";
 @import "mixins";
 @import "base";
+
+.login {
+  font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
+  position: relative;
+  background: #3b5998 !important;
+  width: 400px;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-decoration: none;
+  color: white !important;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 4px;
+  margin: 0 auto;
+  display: block;
+}
+.login i {
+  vertical-align: middle;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.625rem;
+}
+.login:hover {
+}
+.login:active {
+}
+
+.search-box {
+  position: absolute;
+  margin-left: -12.5rem;
+  margin-top: -1.25rem;
+  left: 50%;
+  top: 50%;
+  width: 25rem;
+
+}
+.search-box input {
+  width: 400px;
+  height: 2.5rem;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+  border: none;
+  font-size: 1rem;
+  outline: 0;
+  padding: 0.5rem 0.625rem;
+}
+.search-box ul {
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+  margin-top: 4px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.9);
+}
+.search-box ul li {
+  margin: 0;
+  list-style-type: none;
+}
+.search-box a {
+  display: block;
+  padding: 2px 8px;
+  color: #444;
+}
+.search-box li:first-child a { padding-top: 4px; }
+.search-box li:nth-last-child(2) a { padding-bottom: 4px; }
+
+.search-box a:hover {
+  background: #48f;
+  color: white;
+}
+
+.search-no-results {
+  color: gray;
+  padding: 4px 8px;
+  cursor: default;
+}

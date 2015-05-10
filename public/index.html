@@ -26,30 +26,31 @@
 </head>
 
 
-<body>
+<body style="overflow:auto">
 
-<div class="off-canvas-wrap" data-offcanvas>
-    <div class="inner-wrap">
-        <nav class="tab-bar sticky coolcatstopbar">
+<div class="off-canvas-wrap" data-offcanvas style="height:100%">
+    <div class="inner-wrap" style="height:100%">
+        <nav class="tab-bar sticky coolcatstopbar" style="margin:0">
 
         <section class="left tab-bar-section">
-            <a href="#"><h1 class="title">RateMyClass</h1></a>
+            <a href="#/search"><h1 class="title">RateMyClass</h1></a>
         </section>
 
             <section class="right-small">
-                <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+                <a class="right-off-canvas-toggle menu-icon" href=""><span></span></a>
             </section>
         </nav>
 
         <aside class="right-off-canvas-menu">
             <ul class="off-canvas-list">
-                <li><label>Add User Name Here</label></li>
+                <!--<li><label>Add User Name Here</label></li>-->
                 <li><a href="#">My Reviews</a></li>
                 <li><a href="#">Sign Out</a></li>
             </ul>
         </aside>
 
-        <section class="main-section">
+        <section class="main-section" style="position:fixed;top:70px;left:0;bottom:0;right:0;overflow:auto;">
+        <!--height:100%;overflow:auto;padding-bottom:70px;box-sizing:border-box"-->
             <!-- content goes here -->
             <div ng-view></div>
         </section>
