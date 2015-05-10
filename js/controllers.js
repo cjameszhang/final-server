@@ -1,6 +1,6 @@
 var appControllers = angular.module('appControllers', []);
 
-appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', function ($scope, $http, CourseService, ProfessorService) {
+appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', '$location', function ($scope, $http, CourseService, ProfessorService, $location) {
   var params = {};//{select: {name: 1, email: 1, _id: 1, pendingTasks: 1}};
   $scope.query = '';
   CourseService.get(params)
@@ -11,6 +11,16 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     })
     .error(function (data, status) {
     });
+
+    $scope.keyPress = function(event) {
+      if (event.keyCode === 13) {
+        var c = $scope.filteredCourses;
+        if ($scope.query != '' && c.length > 0) {
+          //alert(c[0]._id);
+          $location.path('/course/' + c[0]._id);
+        }
+      }
+    };
     /*
   ProfessorService.get(params)
     .success(function (data, status) {
