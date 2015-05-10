@@ -45,7 +45,7 @@
             <ul class="off-canvas-list">
                 <li>
                     <img ng-src="{{currentUser.picture}}" />
-                    {{currentUser.name}}
+                    <span id="current-user-name"> {{currentUser.name}}</span>
                 </li>
                 <li><a ng-href="/reviews/{{currentUser._id}}">My Reviews</a></li>
                 <li><a ng-click="logout()">Sign Out</a></li>
@@ -55,7 +55,7 @@
         <section class="main-section" style="position:fixed;top:70px;left:0;bottom:0;right:0;overflow:auto;">
         <!--height:100%;overflow:auto;padding-bottom:70px;box-sizing:border-box"-->
             <!-- content goes here -->
-            <div ng-view></div>
+            <div ng-view style="height:100%"></div>
         </section>
 
         <a class="exit-off-canvas"></a>

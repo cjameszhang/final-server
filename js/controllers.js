@@ -220,6 +220,8 @@ console.log(commentList.length);
         //updateReview(index);
       });
 
+
+
   }
 
   $scope.submitComment = function (index) {

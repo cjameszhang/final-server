@@ -12,10 +12,12 @@
     @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
     @import url(http://fonts.googleapis.com/css?family=Arizonia);
     html {
-        background: url(http://s.cdpn.io/6035/fb_login_bg.png) repeat;
+        //background: url(http://s.cdpn.io/6035/fb_login_bg.png);
     }
     body {
         background: #ccc;
+        background-image: url('images/chalkboard.jpg');
+        background-repeat: cover;
     }
     img.bg {
         /* Set rules to fill background */
@@ -40,20 +42,21 @@
     }
 
     .wordsontop {
-        width: 800px;
+        //width: 800px;
         height: 200px;
         position: absolute;
-        top:0;
+        top:50%;
         bottom: 0;
         left: 0;
         right: 0;
-        margin: auto;
+        margin-top:-100px;
         text-align: center;
     }
     h1.titlecard {
         font-size: 100px;
         font-family: 'Fredericka the Great', cursive;
         color: white;
+        font-size: rem-calc(22);
     }
     h2.subtitlecard {
         margin-top: -25px;
@@ -107,12 +110,18 @@
     }
     .login:active {
     }
+        @media screen and (max-width: 600px) {
+            h1.titlecard {font-size: 60px;}
+            h2.subtitlecard {font-size: 20px; margin-top: -0.75rem;}
+            .loginwrapper { width: 15rem;}
+            .login{width: 15rem;}
+        }
     </style>
 </head>
 
 <body ng-app="passportApp">
         <div ng-controller="profileController" class="container">
-            <img src="images/chalkboard.jpg" class="backgroundimage">
+            <!--<img src="images/chalkboard.jpg" class="backgroundimage" style="background-repeat:cover">-->
             <div class="row">
                 <div class="wordsontop">
                     <h1 class="titlecard">RateMyClass</h1>

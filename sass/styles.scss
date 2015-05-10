@@ -10,6 +10,12 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(http://fonts.googleapis.com/css?family=Arizonia);
 
+#search-wrapper {
+  background: url('../images/Background-Image-Color-Overlay.jpg');
+  background-repeat: cover;
+  height: 100%;
+}
+
 #course-details {
   background: transparent;
 
@@ -163,6 +169,10 @@
 //  left: 50%;
 //  top: 50%;
   width: 25rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -12.5rem;
 
 }
 .search-box input {
@@ -212,6 +222,11 @@
   cursor: default;
 }
 
+#current-user-name {
+  color: white;
+  margin-left: 8px;
+}
+
 h1.searchpagetitle1{
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
@@ -220,11 +235,30 @@ h1.searchpagetitle1{
 }
 h2.searchpagetitle2 {
   font-family: 'Arizonia', cursive;
+  margin-top: -1rem;
   font-size: 30px;
   color: white;
 }
+ @media screen and (max-width: 700px) {
+            h1.searchpagetitle1 {font-size: 20px;}
+            h2.searchpagetitle2 {font-size: 15px; margin-top: -0.75rem;}
+            .search-box {
+
+              width: 20rem;
+              margin-left: -10rem;
+            }
+            .search-box input {
+              width: 20rem;
+            }
+        }
 
 .titles-of-page {
   text-align: center;
   color: white;
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  text-align: center;
+
 }
