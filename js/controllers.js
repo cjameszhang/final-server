@@ -1,11 +1,13 @@
 var appControllers = angular.module('appControllers', []);
 
-appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', 'AuthService', function ($scope, $http, CourseService, ProfessorService, AuthService) {
-  AuthService.getUser(function (data) {
+appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', 'AuthService', '$location', function ($scope, $http, CourseService, ProfessorService, AuthService, $location) {
+    AuthService.getUser(function (data) {
     $scope.currentUser = data._id;
   });
 
-  CourseService.get()
+  var params = {};//{select: {name: 1, email: 1, _id: 1, pendingTasks: 1}};
+  $scope.query = '';
+  CourseService.get(params)
     .success(function (data, status) {
       $scope.courses = data.data;
       $scope.message = data.message;
@@ -13,7 +15,18 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     })
     .error(function (data, status) {
     });
-  ProfessorService.get()
+
+    $scope.keyPress = function(event) {
+      if (event.keyCode === 13) {
+        var c = $scope.filteredCourses;
+        if ($scope.query != '' && c.length > 0) {
+          //alert(c[0]._id);
+          $location.path('/course/' + c[0]._id);
+        }
+      }
+    };
+    /*
+  ProfessorService.get(params)
     .success(function (data, status) {
       $scope.profs = data.data;
       $scope.message = data.message;
@@ -21,6 +34,7 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     })
     .error(function (data, status) {
     });
+*/
 
 }]);
 
@@ -108,19 +122,23 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
   function retrieveComments() {
 
     var commentList = [];
+    var counter = $scope.reviews.length;
 
     $scope.reviews.forEach(function (review, i) {
       commentList.push(getComments(review, function (comments) {
         $scope.reviews[i].commentList = comments;
-      }));
-    });
+        --counter;
+        console.log('got!');
+        if (counter == 0) {
 
-    $q.all(commentList)
-      .then(function () {
         var userList = [];
 
         $scope.reviews.forEach(function (review, i) {
-          if (typeof review.commentList != 'undefined') {
+          console.log('query!');
+          //console.log(review.commentList.length);
+          //while (!review.commentList);
+          if (review.commentList) {
+            console.log(review.commentList);
             review.commentList.forEach(function (comment, j) {
               userList.push(getUser(comment, function (user) {
                 $scope.reviews[i].commentList[j].username = user.facebookId; //TODO: change form facebookId to name
@@ -130,6 +148,13 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
         });
 
         $q.all(userList);
+        }
+      }));
+    });
+
+console.log(commentList.length);
+    $q.all(commentList)
+      .then(function () {
       });
   }
 
