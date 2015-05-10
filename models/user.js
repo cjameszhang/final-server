@@ -2,10 +2,11 @@ var mongoose = require('mongoose');
 
 var ObjectId = mongoose.Schema.Types.ObjectId;
 
-var professorSchema = new mongoose.Schema({
+var userSchema = new mongoose.Schema({
+    facebookId: String,
     name: String,
-    courses: [ObjectId],
+    picture: String,
     dateCreated: {type: Date, default: Date.now}
 });
 
-module.exports = mongoose.model('Professor', professorSchema);
+module.exports = mongoose.model('User', userSchema);

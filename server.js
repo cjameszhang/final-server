@@ -1,54 +1,30 @@
-// Get the packages we need
-var express = require('express');
-var mongoose = require('mongoose');
-var Class = require('./models/class');
-var Professor = require('./models/professor');
-var bodyParser = require('body-parser');
-var router = express.Router();
+var express = require('express'),
+	app = express(),
+	port = process.env.PORT || 3000,
+	mongoose = require('mongoose'),
+	passport = require('passport'),
+	cookieParser = require('cookie-parser'),
+	bodyParser = require('body-parser'),
+	session = require('express-session'),
+	config = require('./app/config.js');
 
-//replace this with your Mongolab URL
-//mongoose.connect('mongodb://localhost/final');
-mongoose.connect('mongodb://cs498:final@ds031792.mongolab.com:31792/final');
+mongoose.connect(config.db);
+require('./app/passport')(passport);
 
-// Create our Express application
-var app = express();
-
-// Use environment defined port or 4000
-var port = process.env.PORT || 4000;
-
-// Allow CORS so that backend and frontend could pe put on different servers
-var allowCrossDomain = function(req, res, next) {
-  res.header("Access-Control-Allow-Origin", "*");
-  res.header("Access-Control-Allow-Headers", "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept")
-  res.header("Access-Control-Allow-Methods", "POST, GET, OPTIONS, PUT, DELETE");;
-  next();
-};
-app.use(allowCrossDomain);
-
-// Use the body-parser package in our application
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({
+  type: '*/x-www-form-urlencoded',
   extended: true
 }));
 
-// All our routes will start with /api
-app.use('/api', router);
+app.use(session({ secret: config.secret }));
+app.use(express.static(__dirname + '/frontend'));
 
-//Default route here
-var homeRoute = router.route('/');
+app.use(passport.initialize());
+app.use(passport.session());
 
-homeRoute.get(function(req, res) {
-  res.json({ message: 'Hello World!' });
-});
+require('./app/routes.js')(app, passport);
+require('./app/api.js')(app, express.Router(), mongoose.connection);
 
-//Llama route 
-var llamaRoute = router.route('/llamas');
-
-llamaRoute.get(function(req, res) {
-  res.json([{ "name": "alice", "height": 12 }, { "name": "jane", "height": 13 }]);
-});
-
-//Add more routes here
-
-// Start the server
 app.listen(port);
-console.log('Server running on port ' + port); 
+console.log('Server running on port ' + port);
