@@ -5,6 +5,7 @@
 @import "mixins";
 @import "base";
 
+<<<<<<< HEAD
 #course-details {
   background: transparent;
 
@@ -122,6 +123,13 @@
     //margin: 0 8px;
   }
 }
+=======
+
+@import url(http://fonts.googleapis.com/css?family=Walter+Turncoat);
+@import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:700);
+@import url(http://fonts.googleapis.com/css?family=Arizonia);
+>>>>>>> 9f44b02e7ff3ca4d2c53b921260e4115d4ce1cee
 
 .login {
   font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
@@ -151,11 +159,11 @@
 }
 
 .search-box {
-  position: absolute;
-  margin-left: -12.5rem;
-  margin-top: -1.25rem;
-  left: 50%;
-  top: 50%;
+//  position: absolute;
+//  margin-left: -12.5rem;
+//  margin-top: -1.25rem;
+//  left: 50%;
+//  top: 50%;
   width: 25rem;
 
 }
@@ -182,6 +190,7 @@
   margin: 0;
   list-style-type: none;
 }
+
 .search-box a {
   display: block;
   padding: 2px 8px;
@@ -196,7 +205,28 @@
 }
 
 .search-no-results {
+  padding: 0 8px;
+}
+
+.search-no-results {
   color: gray;
   padding: 4px 8px;
   cursor: default;
+}
+
+h1.searchpagetitle1{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+  color:white;
+}
+h2.searchpagetitle2 {
+  font-family: 'Arizonia', cursive;
+  font-size: 30px;
+  color: white;
+}
+
+.titles-of-page {
+  text-align: center;
+  color: white;
 }
