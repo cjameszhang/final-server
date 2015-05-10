@@ -31,7 +31,7 @@
             <div class="small-12 columns">
                 <p>Comments:</p>
                 <div ng-repeat="comment in review.commentList">
-                    <strong>{{comment.userName}}</strong>: {{comment.body}}
+                    <strong>{{comment.username}}</strong>: {{comment.body}}
                 </div>
 
                 <form ng-submit="submitComment($index)">
