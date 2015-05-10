@@ -745,4 +745,8 @@ appControllers.controller('SideBarController', ['$scope', '$q', '$http', '$route
     $scope.currentUser = data;
   });
 
+  $scope.logout = function() {
+    AuthService.logout();
+  }
+
 }]);
