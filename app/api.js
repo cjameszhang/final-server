@@ -209,11 +209,33 @@ reviewRoute
 //console.log('request.body ' + JSON.stringify(req.body));
     //console.log(req.body.comments);
     //console.log(req.body.comments[0]);
-    var paramsToChange = Object.keys(req.body);
-    paramsToChange.forEach(function(param) {
-      if (param != '_id')
-        review[param] = req.body[param];
-    });
+      /*
+      user: {type:ObjectId, required: 'a user is required!'},
+    course: {type:ObjectId, required: 'a course is required!'},
+    professor: {type: ObjectId, required: 'a prof is required!'},
+    comments: [ObjectId],
+    rating: {type: Number, min:0, max:10, required: 'a rating is required!'},
+    title: {type: String, required:'a title is required!'},
+    body: {type:String, required:'a body is required!'},
+    upvotes:[ObjectId],
+    downvotes: [ObjectId],
+    */
+
+review.user = req.body.user;
+review.course = req.body.course;
+review.professor = req.body.professor;
+review.comments = req.body.comments || [];
+review.rating = req.body.rating;
+review.title = req.body.title;
+review.upvotes = req.body.upvotes || [];
+review.downvotes = req.body.downvotes || [];
+/*
+          var paramsToChange = Object.keys(review);
+          paramsToChange.forEach(function(param) {
+        if (param != '_id')
+            review[param] = req.body[param];
+          });
+          */;
     review.save(function(err, updatedReview) {
       if (err) {
         console.log(err);
