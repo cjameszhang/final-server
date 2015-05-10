@@ -10,6 +10,20 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(http://fonts.googleapis.com/css?family=Arizonia);
 
+.course-review {
+  margin: 1rem 0.5rem;
+  border-radius: 4px;
+  background: #eee;
+  overflow: hidden;
+
+  padding: 10px;
+  //margin: 0.5rem;
+
+  h3 {
+    vertical-align: bottom;
+  }
+}
+
 #search-wrapper {
   background: url('../images/Background-Image-Color-Overlay.jpg');
   background-repeat: cover;

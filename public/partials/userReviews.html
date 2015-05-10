@@ -1,19 +1,23 @@
 <div class="row">
-        <div ng-repeat="review in reviews">
-            <div class="row panel">
-                <div class="small-8 medium-9 large-10 columns">
+    <div class="course-review" ng-repeat="review in reviews">
+        <div class="row ">
+            <div class="small-8 medium-9 large-10 columns">
 
-                    <div class="row">
-                        <span class="my-review-rating">{{review.rating}}</span>
-                        <h4>{{review.courseName}}</h4>
-                        <h5>{{review.title}}</h5>
-                    </div>
+                <div class="row">
+                    <span class="my-review-rating">{{review.rating}}</span>
+                    <a ng-href="/#/course/{{review.course}}"><h4 style="display: inline; vertical-align:bottom; font-weight: bold">{{review.courseName}}</h4></a>
+                    <h5>{{review.title}}</h5>
                 </div>
-                <div class="small-4 medium-3 large-2 columns">
-                    <a ng-href="#/review/edit/{{review._id}}" class="button radius tiny"><i class="fa fa-pencil-square-o review-icon-size fa-lg fa-2x"></i></a>
-                    <a ng-click="delete(review._id)" class="button radius alert tiny right"><i class="fa fa-trash-o review-icon-size fa-lg fa-2x"></i></a>
+            </div>
+            <div class="small-4 medium-3 large-2 columns">
+                <div class="right">
+                    <a ng-href="#/review/edit/{{review._id}}" class="button radius tiny right"><i
+                            class="fa fa-pencil-square-o review-icon-size fa-lg fa-2x"></i></a>
+                    <a ng-click="delete(review._id)" class="button radius alert tiny right"><i
+                            class="fa fa-trash-o review-icon-size fa-lg fa-2x"></i></a>
                 </div>
 
             </div>
         </div>
+    </div>
 </div>
