@@ -97,7 +97,7 @@
   }
 
   .course-review {
-    margin: 1rem 0;
+    margin: 1rem 0.5rem;
     border-radius: 4px;
     background: #eee;
     overflow: hidden;
@@ -258,7 +258,7 @@ h2.searchpagetitle2 {
 }
  @media screen and (max-width: 700px) {
             h1.searchpagetitle1 {font-size: 20px;}
-            h2.searchpagetitle2 {font-size: 15px; margin-top: -0.75rem;}
+            h2.searchpagetitle2 {display:none;font-size: 15px; margin-top: -0.75rem;}
             .search-box {
 
               width: 20rem;
