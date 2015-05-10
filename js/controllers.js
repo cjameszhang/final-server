@@ -1,7 +1,7 @@
 var appControllers = angular.module('appControllers', []);
 
 appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', 'AuthService', '$location', function ($scope, $http, CourseService, ProfessorService, AuthService, $location) {
-    AuthService.getUser(function (data) {
+  AuthService.getUser(function (data) {
     $scope.currentUser = data._id;
   });
 
@@ -16,25 +16,25 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     .error(function (data, status) {
     });
 
-    $scope.keyPress = function(event) {
-      if (event.keyCode === 13) {
-        var c = $scope.filteredCourses;
-        if ($scope.query != '' && c.length > 0) {
-          //alert(c[0]._id);
-          $location.path('/course/' + c[0]._id);
-        }
+  $scope.keyPress = function (event) {
+    if (event.keyCode === 13) {
+      var c = $scope.filteredCourses;
+      if ($scope.query != '' && c.length > 0) {
+        //alert(c[0]._id);
+        $location.path('/course/' + c[0]._id);
       }
-    };
-    /*
-  ProfessorService.get(params)
-    .success(function (data, status) {
-      $scope.profs = data.data;
-      $scope.message = data.message;
-      $scope.status = status;
-    })
-    .error(function (data, status) {
-    });
-*/
+    }
+  };
+  /*
+   ProfessorService.get(params)
+   .success(function (data, status) {
+   $scope.profs = data.data;
+   $scope.message = data.message;
+   $scope.status = status;
+   })
+   .error(function (data, status) {
+   });
+   */
 
 }]);
 
@@ -131,29 +131,30 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
         console.log('got!');
         if (counter == 0) {
 
-        var userList = [];
+          var userList = [];
 
-        $scope.reviews.forEach(function (review, i) {
-          console.log('query!');
-          //console.log(review.commentList.length);
-          //while (!review.commentList);
-          if (review.commentList) {
-            console.log(review.commentList);
-            review.commentList.forEach(function (comment, j) {
-              userList.push(getUser(comment, function (user) {
-console.log(user);
-                $scope.reviews[i].commentList[j].username = user[0].facebookId; //TODO: change form facebookId to name
-              }));
-            });
-          }
-        });
+          $scope.reviews.forEach(function (review, i) {
+            console.log('query!');
+            //console.log(review.commentList.length);
+            //while (!review.commentList);
+            if (review.commentList) {
+              console.log(review.commentList);
+              review.commentList.forEach(function (comment, j) {
+                userList.push(getUser(comment, function (user) {
+                  console.log(user);
+                  $scope.reviews[i].commentList[j].username = user[0].name;
+                  $scope.reviews[i].commentList[j].picture = user[0].picture;
+                }));
+              });
+            }
+          });
 
-        $q.all(userList);
+          $q.all(userList);
         }
       }));
     });
 
-console.log(commentList.length);
+    console.log(commentList.length);
     $q.all(commentList)
       .then(function () {
       });
@@ -745,7 +746,7 @@ appControllers.controller('SideBarController', ['$scope', '$q', '$http', '$route
     $scope.currentUser = data;
   });
 
-  $scope.logout = function() {
+  $scope.logout = function () {
     AuthService.logout();
   }
 

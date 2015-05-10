@@ -31,6 +31,7 @@
             <div class="small-12 columns">
                 <p>Comments:</p>
                 <div ng-repeat="comment in review.commentList">
+                    <img ng-src="{{comment.picture}}" />
                     <strong>{{comment.username}}</strong>: {{comment.body}}
                 </div>
 
