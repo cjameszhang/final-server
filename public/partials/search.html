@@ -26,7 +26,7 @@
 -->
 
 <div class="search-box">
-    <input ng-model="query" placeholder="Search">
+    <input ng-model="query" placeholder="Search" ng-keydown="keyPress($event)">
     <ul ng-show="query != ''">
         <li ng-repeat="course in filteredCourses = (courses | filter:{name:query} | orderBy:'name' | limitTo:4)">
             <a ng-bind="course.name" ng-href="#/course/{{course._id}}"></a>
