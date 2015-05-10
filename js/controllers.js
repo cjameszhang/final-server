@@ -712,3 +712,11 @@ appControllers.controller('UserReviewController', ['$scope', '$q', '$http', '$ro
   load();
 
 }]);
+
+appControllers.controller('SideBarController', ['$scope', '$q', '$http', '$routeParams', 'CourseService', 'UserService', 'ReviewService', 'AuthService', function ($scope, $q, $http, $routeParams, CourseService, UserService, ReviewService, AuthService) {
+
+  AuthService.getUser(function (data) {
+    $scope.currentUser = data;
+  });
+
+}]);

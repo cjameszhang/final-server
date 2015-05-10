@@ -16,20 +16,26 @@ angular.module('appServices', [])
   .factory('CommentService', function ($http) {
     return restFunctions($http, 'comments');
   })
-  .factory('AuthService', function ($http, $location) {
+  .factory('AuthService', function ($http, $window) {
     return {
       getUser: function(callback) {
         $http.get(baseUrl + '/profile')
           .success(function(data) {
             console.log(data);
 
-            //if (data.error) {
+            if (data.error) {
               //redirect
               //$location.path('/login.html');
-            //} else {
+
+              $window.location.href = "http://" + $window.location.host + "/login.html";
+
+            } else {
               callback(data.user);
-            //}
+            }
           });
+      },
+      logout: function() {
+        return $http.get(baseUrl + '/logout');
       }
     }
   })
