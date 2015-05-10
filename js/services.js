@@ -35,7 +35,10 @@ angular.module('appServices', [])
           });
       },
       logout: function() {
-        return $http.get(baseUrl + '/logout');
+        $http.get(baseUrl + '/logout')
+          .success(function(data) {
+            $window.location.href = "http://" + $window.location.host + "/login.html";
+          });
       }
     }
   })
