@@ -5,8 +5,8 @@ module.exports = function(app, passport) {
 
 	// Define GET route for /profile endpoint
 	app.get('/profile', isLoggedIn, function(req, res) {
-		console.log('profile: ' + req.user.name);
-		console.log('profile: ' + req.user.picture);
+		//console.log('profile: ' + req.user.name);
+		//console.log('profile: ' + req.user.picture);
 		res.json({
 			user: req.user
 		});

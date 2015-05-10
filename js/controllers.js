@@ -2,6 +2,7 @@ var appControllers = angular.module('appControllers', []);
 
 appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', function ($scope, $http, CourseService, ProfessorService) {
   var params = {};//{select: {name: 1, email: 1, _id: 1, pendingTasks: 1}};
+  $scope.query = '';
   CourseService.get(params)
     .success(function (data, status) {
       $scope.courses = data.data;
@@ -10,6 +11,7 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     })
     .error(function (data, status) {
     });
+    /*
   ProfessorService.get(params)
     .success(function (data, status) {
       $scope.profs = data.data;
@@ -18,6 +20,7 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     })
     .error(function (data, status) {
     });
+*/
 
 }]);
 

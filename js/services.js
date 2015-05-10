@@ -19,6 +19,8 @@ angular.module('appServices', [])
   .factory('AuthService', function ($http, $q) {
     return {
       getUser: function() {
+        return $http.get(baseUrl + '/profile');
+        
         var deferred = $q.defer();
 
         var fakeUser = {
