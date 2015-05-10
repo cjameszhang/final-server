@@ -221,6 +221,8 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
         //updateReview(index);
       });
 
+
+
   }
 
   $scope.submitComment = function (index) {
