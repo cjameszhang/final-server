@@ -1,8 +1,11 @@
 var appControllers = angular.module('appControllers', []);
 
-appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', function ($scope, $http, CourseService, ProfessorService) {
-  var params = {};//{select: {name: 1, email: 1, _id: 1, pendingTasks: 1}};
-  CourseService.get(params)
+appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', 'AuthService', function ($scope, $http, CourseService, ProfessorService, AuthService) {
+  AuthService.getUser(function (data) {
+    $scope.currentUser = data._id;
+  });
+
+  CourseService.get()
     .success(function (data, status) {
       $scope.courses = data.data;
       $scope.message = data.message;
@@ -10,7 +13,7 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
     })
     .error(function (data, status) {
     });
-  ProfessorService.get(params)
+  ProfessorService.get()
     .success(function (data, status) {
       $scope.profs = data.data;
       $scope.message = data.message;
@@ -24,11 +27,9 @@ appControllers.controller('SearchController', ['$scope', '$http', 'CourseService
 appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeParams', 'CourseService', 'ProfessorService', 'ReviewService', 'CommentService', 'AuthService', 'UserService', function ($scope, $q, $http, $routeParams, CourseService, ProfessorService, ReviewService, CommentService, AuthService, UserService) {
   var id = $routeParams.id;
 
-  AuthService.getUser()
-    .then(function (data) {
-      $scope.currentUser = data._id;
-    });
-
+  AuthService.getUser(function (data) {
+    $scope.currentUser = data._id;
+  });
 
   CourseService.getById(id)
     .then(function (res) {
@@ -108,17 +109,17 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
 
     var commentList = [];
 
-    $scope.reviews.forEach(function(review, i) {
-      commentList.push(getComments(review, function(comments) {
+    $scope.reviews.forEach(function (review, i) {
+      commentList.push(getComments(review, function (comments) {
         $scope.reviews[i].commentList = comments;
       }));
     });
 
     $q.all(commentList)
-      .then(function() {
+      .then(function () {
         var userList = [];
 
-        $scope.reviews.forEach(function(review, i) {
+        $scope.reviews.forEach(function (review, i) {
           if (typeof review.commentList != 'undefined') {
             review.commentList.forEach(function (comment, j) {
               userList.push(getUser(comment, function (user) {
@@ -175,7 +176,7 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
     console.log(comment);
 
     CommentService.post(comment)
-      .then(function(res) {
+      .then(function (res) {
         var commentId = res.data.data._id;
 
         $scope.reviews[index].comments.push(commentId);
@@ -266,11 +267,9 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
 appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routeParams', 'CourseService', 'ProfessorService', 'ReviewService', 'CommentService', 'UserService', 'AuthService', function ($scope, $q, $http, $routeParams, CourseService, ProfessorService, ReviewService, CommentService, UserService, AuthService) {
   var id = $routeParams.id;
 
-  AuthService.getUser()
-    .then(function (data) {
-      $scope.currentUser = data._id;
-    });
-
+  AuthService.getUser(function (data) {
+    $scope.currentUser = data._id;
+  });
 
   ProfessorService.getById(id)
     .then(function (res) {
@@ -354,17 +353,17 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
 
     var commentList = [];
 
-    $scope.reviews.forEach(function(review, i) {
-      commentList.push(getComments(review, function(comments) {
+    $scope.reviews.forEach(function (review, i) {
+      commentList.push(getComments(review, function (comments) {
         $scope.reviews[i].commentList = comments;
       }));
     });
 
     $q.all(commentList)
-      .then(function() {
+      .then(function () {
         var userList = [];
 
-        $scope.reviews.forEach(function(review, i) {
+        $scope.reviews.forEach(function (review, i) {
           if (typeof review.commentList != 'undefined') {
             review.commentList.forEach(function (comment, j) {
               userList.push(getUser(comment, function (user) {
@@ -421,7 +420,7 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
     console.log(comment);
 
     CommentService.post(comment)
-      .then(function(res) {
+      .then(function (res) {
         var commentId = res.data.data._id;
 
         $scope.reviews[index].comments.push(commentId);
@@ -508,7 +507,7 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
 
 }]);
 
-appControllers.controller('ReviewController', ['$scope', '$location', '$http', '$routeParams', 'CourseService', 'ProfessorService', 'ReviewService', function ($scope, $location, $http, $routeParams, CourseService, ProfessorService, ReviewService) {
+appControllers.controller('ReviewController', ['$scope', '$location', '$http', '$routeParams', 'CourseService', 'ProfessorService', 'ReviewService', 'AuthService', function ($scope, $location, $http, $routeParams, CourseService, ProfessorService, ReviewService, AuthService) {
   var profId = $routeParams.profId;
   var courseId = $routeParams.courseId;
   var reviewId = $routeParams.reviewId;
@@ -529,8 +528,12 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
   $scope.error = false;
   $scope.validReview = true;
 
+  AuthService.getUser(function (data) {
+    $scope.review.user = data._id;
+  });
+
   $scope.review = {
-    user: '554d8c2b2edcce772e01e895', //TODO: change once we have authentication
+    user: '', //TODO: change once we have authentication
     course: typeof courseId != 'undefined' ? courseId : '',
     rating: '',
     professor: typeof profId != 'undefined' ? profId : '',
@@ -629,40 +632,46 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
   }
 
   $scope.submit = function () {
-    if ($scope.reviewForm.course.$invalid || $scope.reviewForm.rating.$invalid
-      || $scope.reviewForm.title.$invalid || $scope.reviewForm.desc.$invalid) {
-      $scope.error = true;
-    } else {
-      var review = $scope.review;
-      console.log('here');
-      $scope.error = false;
-
-      console.log(review);
-
-      var query;
-
-      if ($scope.mode == 'Add') {
-        query = ReviewService.post(review);
+    if ($scope.review.user) {
+      if ($scope.reviewForm.course.$invalid || $scope.reviewForm.rating.$invalid
+        || $scope.reviewForm.title.$invalid || $scope.reviewForm.desc.$invalid) {
+        $scope.error = true;
       } else {
-        query = ReviewService.updateByObj(review);
+        var review = $scope.review;
+        console.log('here');
+        $scope.error = false;
+
+        console.log(review);
+
+        var query;
+
+        if ($scope.mode == 'Add') {
+          query = ReviewService.post(review);
+        } else {
+          query = ReviewService.updateByObj(review);
+        }
+        query
+          .success(function (data, status) {
+            $scope.showMessage = true;
+            $scope.displayText = data.message;
+            $scope.error = false;
+          })
+          .error(function (data, status) {
+            $scope.showMessage = true;
+            $scope.displayText = data.message;
+            $scope.error = true;
+          });
       }
-      query
-        .success(function (data, status) {
-          $scope.showMessage = true;
-          $scope.displayText = data.message;
-          $scope.error = false;
-        })
-        .error(function (data, status) {
-          $scope.showMessage = true;
-          $scope.displayText = data.message;
-          $scope.error = true;
-        });
     }
   }
 
 }]);
 
-appControllers.controller('UserReviewController', ['$scope', '$q', '$http', '$routeParams', 'CourseService', 'UserService', 'ReviewService', function ($scope, $q, $http, $routeParams, CourseService, UserService, ReviewService) {
+appControllers.controller('UserReviewController', ['$scope', '$q', '$http', '$routeParams', 'CourseService', 'UserService', 'ReviewService', 'AuthService', function ($scope, $q, $http, $routeParams, CourseService, UserService, ReviewService, AuthService) {
+
+  AuthService.getUser(function (data) {
+    $scope.currentUser = data._id;
+  });
 
   var userId = $routeParams.userId;
 
