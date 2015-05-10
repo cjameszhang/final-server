@@ -206,13 +206,13 @@ reviewRoute
     if (err)
       res.status(404).json(generateResponse('Review not found'));
 
-console.log('request.body ' + JSON.stringify(req.body));
-    console.log(req.body.comments);
-    console.log(req.body.comments[0]);
+//console.log('request.body ' + JSON.stringify(req.body));
+    //console.log(req.body.comments);
+    //console.log(req.body.comments[0]);
     var paramsToChange = Object.keys(req.body);
     paramsToChange.forEach(function(param) {
       if (param != '_id')
-        review[param] = JSON.parse(req.body[param]);
+        review[param] = req.body[param];
     });
     review.save(function(err, updatedReview) {
       if (err) {
