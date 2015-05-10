@@ -30,9 +30,6 @@
         <div class="row">
             <div class="small-12 columns">
                 <p>Comments:</p>
-                <div ng-repeat="i in [1, 2]">
-                    <div><strong>Name:</strong></div>
-                </div>
                 <div ng-repeat="comment in review.commentList">
                     <strong>{{comment.userName}}</strong>: {{comment.body}}
                 </div>

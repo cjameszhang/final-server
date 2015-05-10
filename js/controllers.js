@@ -1,5 +1,39 @@
 var appControllers = angular.module('appControllers', []);
 
+appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', '$location', function ($scope, $http, CourseService, ProfessorService, $location) {
+  var params = {};//{select: {name: 1, email: 1, _id: 1, pendingTasks: 1}};
+  $scope.query = '';
+  CourseService.get(params)
+    .success(function (data, status) {
+      $scope.courses = data.data;
+      $scope.message = data.message;
+      $scope.status = status;
+    })
+    .error(function (data, status) {
+    });
+
+  $scope.keyPress = function(event) {
+    if (event.keyCode === 13) {
+      var c = $scope.filteredCourses;
+      if ($scope.query != '' && c.length > 0) {
+        //alert(c[0]._id);
+        $location.path('/course/' + c[0]._id);
+      }
+    }
+  };
+  /*
+   ProfessorService.get(params)
+   .success(function (data, status) {
+   $scope.profs = data.data;
+   $scope.message = data.message;
+   $scope.status = status;
+   })
+   .error(function (data, status) {
+   });
+   */
+
+}]);
+
 appControllers.controller('SearchController', ['$scope', '$http', 'CourseService', 'ProfessorService', 'AuthService', function ($scope, $http, CourseService, ProfessorService, AuthService) {
   AuthService.getUser(function (data) {
     $scope.currentUser = data._id;
@@ -667,14 +701,16 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
 
 }]);
 
-appControllers.controller('UserReviewController', ['$scope', '$q', '$http', '$routeParams', 'CourseService', 'UserService', 'ReviewService', 'AuthService', function ($scope, $q, $http, $routeParams, CourseService, UserService, ReviewService, AuthService) {
-
+appControllers.controller('UserReviewController', ['$scope', '$window', '$q', '$http', '$routeParams', 'CourseService', 'UserService', 'ReviewService', 'AuthService', function ($scope, $window, $q, $http, $routeParams, CourseService, UserService, ReviewService, AuthService) {
+  var userId = $routeParams.userId;
+/*
   AuthService.getUser(function (data) {
     $scope.currentUser = data._id;
+    if (userId != $scope.currentUser) {
+      $window.location.href = "http://" + $window.location.host + "/login.html";
+    }
   });
-
-  var userId = $routeParams.userId;
-
+*/
   function load() {
     var params = {where: {user: userId}};
     ReviewService.get(params)
@@ -718,5 +754,9 @@ appControllers.controller('SideBarController', ['$scope', '$q', '$http', '$route
   AuthService.getUser(function (data) {
     $scope.currentUser = data;
   });
+
+  $scope.logout = function() {
+    AuthService.logout();
+  }
 
 }]);

@@ -41,14 +41,14 @@
             </section>
         </nav>
 
-        <aside class="right-off-canvas-menu">
+        <aside class="right-off-canvas-menu" ng-controller="SideBarController">
             <ul class="off-canvas-list">
-                <li ng-controller="SideBarController">
+                <li>
                     <img ng-src="{{currentUser.picture}}" />
                     {{currentUser.name}}
                 </li>
-                <li><a href="#">My Reviews</a></li>
-                <li><a href="#">Sign Out</a></li>
+                <li><a ng-href="/reviews/{{currentUser._id}}">My Reviews</a></li>
+                <li><a ng-click="logout()">Sign Out</a></li>
             </ul>
         </aside>
 
