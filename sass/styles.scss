@@ -100,6 +100,7 @@
     margin: 1rem 0.5rem;
     border-radius: 4px;
     background: #eee;
+    word-wrap: break-word;
     overflow: hidden;
 
     a.button {
@@ -131,7 +132,7 @@
   .review-comments-list {
     border-top: 1px solid #ccc;
 
-    div:last-child {
+    div {
       padding-bottom: 4px;
       border-bottom: 1px solid #ccc;
     }
@@ -140,11 +141,12 @@
       padding-top: 4px;
     }
 
-    margin: 4px 8px 0;
+    margin: 4px 8px ;
   }
 
   .review-comment {
-    //margin: 0 8px;
+    margin-bottom: 4px;
+    word-wrap: break-word;
   }
 }
 

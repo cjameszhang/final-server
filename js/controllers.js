@@ -44,6 +44,7 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
   AuthService.getUser(function (data) {
     $scope.currentUser = data._id;
     $scope.currentUserName = data.name;
+    $scope.currentPicture = data.picture;
   });
 
   CourseService.getById(id)
@@ -212,10 +213,11 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
 
 
         // NEW THING LOCAL CHANGE
-        var dfdf = comment;
-        dfdf.username = $scope.currentUserName;
+        var newComment = comment;
+        newComment.username = $scope.currentUserName;
+        newComment.picture = $scope.currentPicture;
         //$scope.reviews[index].commentList[j].username = user.facebookId; //TODO: change form facebookId to name
-        $scope.reviews[index].commentList.push(dfdf);
+        $scope.reviews[index].commentList.push(newComment);
 
         //$scope.reviews[index].comments.push(commentId);
         //updateReview(index);
@@ -229,6 +231,7 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
     if (typeof $scope.currentUser != 'undefined' && $scope.reviews[index].userInput.length > 0) {
       console.log(index + ': ' + $scope.reviews[index].userInput);
       createComment(index, $scope.reviews[index].userInput);
+      $scope.reviews[index].userInput = '';
       if (doUpdates()) retrieveComments();
     } else {
       //TODO: handle unauthorized
@@ -283,7 +286,7 @@ appControllers.controller('CourseController', ['$scope', '$q', '$http', '$routeP
     var keys = [];
     for (var key in obj) keys.push(key);
     return keys.sort(function (a, b) {
-      return obj[a] - obj[b]
+      return obj[b] - obj[a]
     });
   }
 
@@ -407,7 +410,8 @@ appControllers.controller('ProfController', ['$scope', '$q', '$http', '$routePar
           if (typeof review.commentList != 'undefined') {
             review.commentList.forEach(function (comment, j) {
               userList.push(getUser(comment, function (user) {
-                $scope.reviews[i].commentList[j].username = user.facebookId; //TODO: change form facebookId to name
+                $scope.reviews[i].commentList[j].username = user.facebookId;
+                $scope.reviews[i].commentList[j].username = user.facebookId;
               }));
             });
           }
@@ -566,8 +570,6 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
   var courseId = $routeParams.courseId;
   var reviewId = $routeParams.reviewId;
 
-  if (typeof reviewId != 'undefined')
-    $scope.returnAddress = '#/search';
   if (typeof profId != 'undefined')
     $scope.returnAddress = '#/professor/' + profId;
   if (typeof courseId != 'undefined')
@@ -601,6 +603,8 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
     ReviewService.getById(reviewId)
       .success(function (data, status) {
         $scope.review = data.data;
+        courseId = $scope.review.course;
+
         loadCourseProf();
 
         if ($scope.review.professor != profId)
@@ -611,6 +615,11 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
       });
 
   }
+
+  $scope.cancel = function() {
+    console.log(courseId);
+    $location.path('/course/' + courseId);
+  };
 
   function reviewError() {
     $scope.displayText = "The review you're attempting to edit doesn't exist";
@@ -706,9 +715,10 @@ appControllers.controller('ReviewController', ['$scope', '$location', '$http', '
         }
         query
           .success(function (data, status) {
-            $scope.showMessage = true;
+            $scope.showMessage = false;
             $scope.displayText = data.message;
             $scope.error = false;
+            $location.path('/course/' + courseId);// = "http://" + $window.location.host + "/" + $scope.returnAddress;
           })
           .error(function (data, status) {
             $scope.showMessage = true;
