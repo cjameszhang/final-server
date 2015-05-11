@@ -10,6 +10,20 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(http://fonts.googleapis.com/css?family=Arizonia);
 
+.course-review {
+  margin: 1rem 0.5rem;
+  border-radius: 4px;
+  background: #eee;
+  overflow: hidden;
+
+  padding: 10px;
+  //margin: 0.5rem;
+
+  h3 {
+    vertical-align: bottom;
+  }
+}
+
 #search-wrapper {
   background: url('../images/Background-Image-Color-Overlay.jpg');
   background-repeat: cover;
@@ -86,6 +100,7 @@
     margin: 1rem 0.5rem;
     border-radius: 4px;
     background: #eee;
+    word-wrap: break-word;
     overflow: hidden;
 
     a.button {
@@ -117,7 +132,7 @@
   .review-comments-list {
     border-top: 1px solid #ccc;
 
-    div:last-child {
+    div {
       padding-bottom: 4px;
       border-bottom: 1px solid #ccc;
     }
@@ -126,14 +141,18 @@
       padding-top: 4px;
     }
 
-    margin: 4px 8px 0;
+    margin: 4px 8px ;
   }
 
   .review-comment {
-    //margin: 0 8px;
+    margin-bottom: 4px;
+    word-wrap: break-word;
   }
 }
 
+
+@import "../public/foundation/scss/foundation/components/labels";
+@import "../public/foundation/scss/foundation/components/buttons";
 
 .login {
   font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
@@ -261,4 +280,33 @@ h2.searchpagetitle2 {
   right: 0;
   text-align: center;
 
+}
+
+.my-review-rating {
+  @include label(
+    // This options sets label padding
+  $padding:7px 16px 9px,
+    // This option sets label text-size
+  $text-size:13px,
+    // This option sets label background-color
+  $bg: #7f7f7f,
+    // This option sets the radius of the label
+  $radius:4px
+  );
+}
+
+.my-review-buttons {
+  @include button(
+    // $padding - Used to build padding for buttons Default: $button-med or rem-calc(12)
+    $padding : $button-med,
+    // Background color. We can set $bg:false for a transparent background. Default: $primary-color.
+    $bg: #ffffff,
+    // If true, set to button radius which is $global-radius or explicitly set radius amount in px (ex. $radius:10px). Default:false.
+    $radius: $global-radius,
+    // We can set $full-width:true to remove side padding extend width. Default:false
+    $full-width: false,
+    // We can set $disabled:true to create a disabled transparent button. Default:false
+    $disabled: false
+    // $is-input - <input>s and <button>s take on strange padding. We added this to help fix that. Default:false
+  );
 }
