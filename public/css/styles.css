@@ -3,7 +3,12 @@
 @import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(http://fonts.googleapis.com/css?family=Arizonia);
+<<<<<<< HEAD
 /* line 5, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+=======
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+/* line 5, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,6 +29,7 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
+<<<<<<< HEAD
 /* line 22, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1; }
@@ -33,38 +39,83 @@ ol, ul {
   list-style: none; }
 
 /* line 26, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 22, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1; }
+
+/* line 24, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none; }
+
+/* line 26, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+<<<<<<< HEAD
 /* line 28, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 28, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle; }
 
+<<<<<<< HEAD
 /* line 30, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none; }
   /* line 103, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 30, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none; }
+  /* line 103, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   q:before, q:after, blockquote:before, blockquote:after {
     content: "";
     content: none; }
 
+<<<<<<< HEAD
 /* line 32, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none; }
 
 /* line 116, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+=======
+/* line 32, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none; }
+
+/* line 116, ../../../../../../../../../../../Users/Edward/.rvm/gems/ruby-2.2.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
   display: block; }
 
 /* line 13, ../../sass/styles.scss */
+<<<<<<< HEAD
+=======
+.course-review {
+  margin: 1rem 0.5rem;
+  border-radius: 4px;
+  background: #eee;
+  overflow: hidden;
+  padding: 10px; }
+  /* line 22, ../../sass/styles.scss */
+  .course-review h3 {
+    vertical-align: bottom; }
+
+/* line 27, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 #search-wrapper {
   background: url("../images/Background-Image-Color-Overlay.jpg");
   background-repeat: cover;
   height: 100%; }
 
+<<<<<<< HEAD
 /* line 19, ../../sass/styles.scss */
 #course-details {
   background: transparent; }
@@ -76,19 +127,40 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #course-details #average-rating a {
     background: #888; }
   /* line 31, ../../sass/styles.scss */
+=======
+/* line 33, ../../sass/styles.scss */
+#course-details {
+  background: transparent; }
+  /* line 36, ../../sass/styles.scss */
+  #course-details h1 {
+    margin: 0;
+    padding: 0; }
+  /* line 41, ../../sass/styles.scss */
+  #course-details #average-rating a {
+    background: #888; }
+  /* line 45, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   #course-details a.button {
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding: 8px 16px; }
+<<<<<<< HEAD
   /* line 39, ../../sass/styles.scss */
   #course-details #course-details-heading {
     margin-top: 1rem; }
   /* line 46, ../../sass/styles.scss */
+=======
+  /* line 53, ../../sass/styles.scss */
+  #course-details #course-details-heading {
+    margin-top: 1rem; }
+  /* line 60, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   #course-details #course-rating-info {
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center; }
+<<<<<<< HEAD
     /* line 51, ../../sass/styles.scss */
     #course-details #course-rating-info a.button {
       margin: 0; }
@@ -96,12 +168,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     #course-details #course-rating-info #add-review {
       margin-left: 0.5rem; }
   /* line 55, ../../sass/styles.scss */
+=======
+    /* line 65, ../../sass/styles.scss */
+    #course-details #course-rating-info a.button {
+      margin: 0; }
+    /* line 66, ../../sass/styles.scss */
+    #course-details #course-rating-info #add-review {
+      margin-left: 0.5rem; }
+  /* line 69, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   #course-details #course-ratings {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-top: 0.5rem; }
+<<<<<<< HEAD
     /* line 65, ../../sass/styles.scss */
     #course-details #course-ratings ul {
       display: inline-block;
@@ -110,18 +192,33 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     #course-details #course-ratings li {
       margin: 0; }
     /* line 67, ../../sass/styles.scss */
+=======
+    /* line 79, ../../sass/styles.scss */
+    #course-details #course-ratings ul {
+      display: inline-block;
+      margin: 0 0.5rem; }
+    /* line 80, ../../sass/styles.scss */
+    #course-details #course-ratings li {
+      margin: 0; }
+    /* line 81, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
     #course-details #course-ratings a.button {
       cursor: default;
       background: #888;
       padding: 8px 16px;
       margin-bottom: 0.5rem; }
+<<<<<<< HEAD
   /* line 77, ../../sass/styles.scss */
+=======
+  /* line 91, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   #course-details .course-review-scoring a {
     -moz-transition: color 0.2s;
     -o-transition: color 0.2s;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
     color: #ccc; }
+<<<<<<< HEAD
   /* line 81, ../../sass/styles.scss */
   #course-details .course-review-scoring a:hover {
     color: #999; }
@@ -129,16 +226,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #course-details .course-review-scoring a.selected {
     color: #666; }
   /* line 85, ../../sass/styles.scss */
+=======
+  /* line 95, ../../sass/styles.scss */
+  #course-details .course-review-scoring a:hover {
+    color: #999; }
+  /* line 96, ../../sass/styles.scss */
+  #course-details .course-review-scoring a.selected {
+    color: #666; }
+  /* line 99, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   #course-details .course-review {
     margin: 1rem 0.5rem;
     border-radius: 4px;
     background: #eee;
+<<<<<<< HEAD
     overflow: hidden; }
     /* line 91, ../../sass/styles.scss */
+=======
+    word-wrap: break-word;
+    overflow: hidden; }
+    /* line 106, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
     #course-details .course-review a.button {
       margin-top: 0;
       background: #888;
       cursor: default; }
+<<<<<<< HEAD
     /* line 97, ../../sass/styles.scss */
     #course-details .course-review h3 {
       vertical-align: bottom; }
@@ -146,12 +259,22 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   #course-details .review-score {
     font-size: 1.5rem; }
   /* line 109, ../../sass/styles.scss */
+=======
+    /* line 112, ../../sass/styles.scss */
+    #course-details .course-review h3 {
+      vertical-align: bottom; }
+  /* line 117, ../../sass/styles.scss */
+  #course-details .review-score {
+    font-size: 1.5rem; }
+  /* line 124, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   #course-details .review-comments input {
     background: transparent;
     margin: 0;
     outline: 0;
     border: none;
     box-shadow: none; }
+<<<<<<< HEAD
   /* line 117, ../../sass/styles.scss */
   #course-details .review-comments-list {
     border-top: 1px solid #ccc;
@@ -165,6 +288,453 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       padding-top: 4px; }
 
 /* line 138, ../../sass/styles.scss */
+=======
+  /* line 132, ../../sass/styles.scss */
+  #course-details .review-comments-list {
+    border-top: 1px solid #ccc;
+    margin: 4px 8px; }
+    /* line 135, ../../sass/styles.scss */
+    #course-details .review-comments-list div {
+      padding-bottom: 4px;
+      border-bottom: 1px solid #ccc; }
+    /* line 140, ../../sass/styles.scss */
+    #course-details .review-comments-list div:first-child {
+      padding-top: 4px; }
+  /* line 147, ../../sass/styles.scss */
+  #course-details .review-comment {
+    margin-bottom: 4px;
+    word-wrap: break-word; }
+
+/* line 348, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-version {
+  font-family: "/5.5.1/"; }
+
+/* line 352, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-small {
+  font-family: "/only screen/";
+  width: 0; }
+
+/* line 357, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-small-only {
+  font-family: "/only screen and (max-width: 40em)/";
+  width: 0; }
+
+/* line 362, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-medium {
+  font-family: "/only screen and (min-width:40.063em)/";
+  width: 40.063em; }
+
+/* line 367, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-medium-only {
+  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  width: 40.063em; }
+
+/* line 372, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-large {
+  font-family: "/only screen and (min-width:64.063em)/";
+  width: 64.063em; }
+
+/* line 377, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-large-only {
+  font-family: "/only screen and (min-width:64.063em) and (max-width:90em)/";
+  width: 64.063em; }
+
+/* line 382, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-xlarge {
+  font-family: "/only screen and (min-width:90.063em)/";
+  width: 90.063em; }
+
+/* line 387, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-xlarge-only {
+  font-family: "/only screen and (min-width:90.063em) and (max-width:120em)/";
+  width: 90.063em; }
+
+/* line 392, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-xxlarge {
+  font-family: "/only screen and (min-width:120.063em)/";
+  width: 120.063em; }
+
+/* line 397, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-data-attribute-namespace {
+  font-family: false; }
+
+/* line 404, ../foundation/scss/foundation/components/_global.scss */
+html, body {
+  height: 100%; }
+
+/* line 407, ../foundation/scss/foundation/components/_global.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 413, ../foundation/scss/foundation/components/_global.scss */
+html,
+body {
+  font-size: 16px; }
+
+/* line 417, ../foundation/scss/foundation/components/_global.scss */
+body {
+  background: #fff;
+  color: #222;
+  padding: 0;
+  margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 24px;
+  position: relative;
+  cursor: auto; }
+
+/* line 430, ../foundation/scss/foundation/components/_global.scss */
+a:hover {
+  cursor: pointer; }
+
+/* line 433, ../foundation/scss/foundation/components/_global.scss */
+img {
+  max-width: 100%;
+  height: auto; }
+
+/* line 435, ../foundation/scss/foundation/components/_global.scss */
+img {
+  -ms-interpolation-mode: bicubic; }
+
+/* line 439, ../foundation/scss/foundation/components/_global.scss */
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+/* line 446, ../foundation/scss/foundation/components/_global.scss */
+.left {
+  float: left !important; }
+
+/* line 447, ../foundation/scss/foundation/components/_global.scss */
+.right {
+  float: right !important; }
+
+/* line 172, ../foundation/scss/foundation/components/_global.scss */
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+/* line 173, ../foundation/scss/foundation/components/_global.scss */
+.clearfix:after {
+  clear: both; }
+
+/* line 451, ../foundation/scss/foundation/components/_global.scss */
+.hide {
+  display: none; }
+
+/* line 456, ../foundation/scss/foundation/components/_global.scss */
+.invisible {
+  visibility: hidden; }
+
+/* line 462, ../foundation/scss/foundation/components/_global.scss */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+/* line 465, ../foundation/scss/foundation/components/_global.scss */
+img {
+  display: inline-block;
+  vertical-align: middle; }
+
+/* line 475, ../foundation/scss/foundation/components/_global.scss */
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+/* line 478, ../foundation/scss/foundation/components/_global.scss */
+select {
+  width: 100%; }
+
+/* line 91, ../foundation/scss/foundation/components/_labels.scss */
+.label {
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  margin-bottom: auto;
+  padding: 0.25rem 0.5rem 0.25rem;
+  font-size: 0.6875rem;
+  background-color: #008CBA;
+  color: #FFFFFF; }
+  /* line 96, ../foundation/scss/foundation/components/_labels.scss */
+  .label.radius {
+    border-radius: 3px; }
+  /* line 97, ../foundation/scss/foundation/components/_labels.scss */
+  .label.round {
+    border-radius: 1000px; }
+  /* line 99, ../foundation/scss/foundation/components/_labels.scss */
+  .label.alert {
+    background-color: #f04124;
+    color: #FFFFFF; }
+  /* line 100, ../foundation/scss/foundation/components/_labels.scss */
+  .label.warning {
+    background-color: #f08a24;
+    color: #FFFFFF; }
+  /* line 101, ../foundation/scss/foundation/components/_labels.scss */
+  .label.success {
+    background-color: #43AC6A;
+    color: #FFFFFF; }
+  /* line 102, ../foundation/scss/foundation/components/_labels.scss */
+  .label.secondary {
+    background-color: #e7e7e7;
+    color: #333333; }
+  /* line 103, ../foundation/scss/foundation/components/_labels.scss */
+  .label.info {
+    background-color: #a0d3e8;
+    color: #333333; }
+
+/* line 218, ../foundation/scss/foundation/components/_buttons.scss */
+button, .button {
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 2px;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #70DB70;
+  border-color: white;
+  color: white;
+  transition: background-color 300ms ease-out; }
+  /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+  button:hover, button:focus, .button:hover, .button:focus {
+    background-color: #3bce3b; }
+  /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+  button:hover, button:focus, .button:hover, .button:focus {
+    color: #FFFFFF; }
+  /* line 225, ../foundation/scss/foundation/components/_buttons.scss */
+  button.secondary, .button.secondary {
+    background-color: #e7e7e7;
+    border-color: #b9b9b9;
+    color: white; }
+    /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+      background-color: #b9b9b9; }
+    /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+    button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
+      color: #333333; }
+  /* line 226, ../foundation/scss/foundation/components/_buttons.scss */
+  button.success, .button.success {
+    background-color: #43AC6A;
+    border-color: #368a55;
+    color: white; }
+    /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+      background-color: #368a55; }
+    /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+    button.success:hover, button.success:focus, .button.success:hover, .button.success:focus {
+      color: #FFFFFF; }
+  /* line 227, ../foundation/scss/foundation/components/_buttons.scss */
+  button.alert, .button.alert {
+    background-color: #E68585;
+    border-color: white;
+    color: white; }
+    /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+      background-color: #cf2a0e; }
+    /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+    button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
+      color: #FFFFFF; }
+  /* line 228, ../foundation/scss/foundation/components/_buttons.scss */
+  button.warning, .button.warning {
+    background-color: #f08a24;
+    border-color: #cf6e0e;
+    color: white; }
+    /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+    button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
+      background-color: #cf6e0e; }
+    /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+    button.warning:hover, button.warning:focus, .button.warning:hover, .button.warning:focus {
+      color: #FFFFFF; }
+  /* line 229, ../foundation/scss/foundation/components/_buttons.scss */
+  button.info, .button.info {
+    background-color: #a0d3e8;
+    border-color: #61b6d9;
+    color: white; }
+    /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+    button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
+      background-color: #61b6d9; }
+    /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+    button.info:hover, button.info:focus, .button.info:hover, .button.info:focus {
+      color: #FFFFFF; }
+  /* line 231, ../foundation/scss/foundation/components/_buttons.scss */
+  button.large, .button.large {
+    padding-top: 1.125rem;
+    padding-right: 2.25rem;
+    padding-bottom: 1.1875rem;
+    padding-left: 2.25rem;
+    font-size: 1.25rem; }
+  /* line 232, ../foundation/scss/foundation/components/_buttons.scss */
+  button.small, .button.small {
+    padding-top: 0.875rem;
+    padding-right: 1.75rem;
+    padding-bottom: 0.9375rem;
+    padding-left: 1.75rem;
+    font-size: 0.8125rem; }
+  /* line 233, ../foundation/scss/foundation/components/_buttons.scss */
+  button.tiny, .button.tiny {
+    padding-top: 0.625rem;
+    padding-right: 1.25rem;
+    padding-bottom: 0.6875rem;
+    padding-left: 1.25rem;
+    font-size: 0.6875rem; }
+  /* line 234, ../foundation/scss/foundation/components/_buttons.scss */
+  button.expand, .button.expand {
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%; }
+  /* line 236, ../foundation/scss/foundation/components/_buttons.scss */
+  button.left-align, .button.left-align {
+    text-align: left;
+    text-indent: 0.75rem; }
+  /* line 237, ../foundation/scss/foundation/components/_buttons.scss */
+  button.right-align, .button.right-align {
+    text-align: right;
+    padding-right: 0.75rem; }
+  /* line 239, ../foundation/scss/foundation/components/_buttons.scss */
+  button.radius, .button.radius {
+    border-radius: 3px; }
+  /* line 240, ../foundation/scss/foundation/components/_buttons.scss */
+  button.round, .button.round {
+    border-radius: 1000px; }
+  /* line 242, ../foundation/scss/foundation/components/_buttons.scss */
+  button.disabled, button[disabled], .button.disabled, .button[disabled] {
+    background-color: #70DB70;
+    border-color: white;
+    color: white;
+    cursor: default;
+    opacity: 0.7;
+    box-shadow: none; }
+    /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+      background-color: #3bce3b; }
+    /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+      color: #FFFFFF; }
+    /* line 180, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
+      background-color: #70DB70; }
+    /* line 243, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
+      background-color: #e7e7e7;
+      border-color: #b9b9b9;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      box-shadow: none; }
+      /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+        background-color: #b9b9b9; }
+      /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+        color: #333333; }
+      /* line 180, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
+        background-color: #e7e7e7; }
+    /* line 244, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
+      background-color: #43AC6A;
+      border-color: #368a55;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      box-shadow: none; }
+      /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+        background-color: #368a55; }
+      /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+        color: #FFFFFF; }
+      /* line 180, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.success:hover, button.disabled.success:focus, button[disabled].success:hover, button[disabled].success:focus, .button.disabled.success:hover, .button.disabled.success:focus, .button[disabled].success:hover, .button[disabled].success:focus {
+        background-color: #43AC6A; }
+    /* line 245, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled.alert, button[disabled].alert, .button.disabled.alert, .button[disabled].alert {
+      background-color: #f04124;
+      border-color: #cf2a0e;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      box-shadow: none; }
+      /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+        background-color: #cf2a0e; }
+      /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+        color: #FFFFFF; }
+      /* line 180, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.alert:hover, button.disabled.alert:focus, button[disabled].alert:hover, button[disabled].alert:focus, .button.disabled.alert:hover, .button.disabled.alert:focus, .button[disabled].alert:hover, .button[disabled].alert:focus {
+        background-color: #f04124; }
+    /* line 246, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled.warning, button[disabled].warning, .button.disabled.warning, .button[disabled].warning {
+      background-color: #f08a24;
+      border-color: #cf6e0e;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      box-shadow: none; }
+      /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
+        background-color: #cf6e0e; }
+      /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
+        color: #FFFFFF; }
+      /* line 180, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.warning:hover, button.disabled.warning:focus, button[disabled].warning:hover, button[disabled].warning:focus, .button.disabled.warning:hover, .button.disabled.warning:focus, .button[disabled].warning:hover, .button[disabled].warning:focus {
+        background-color: #f08a24; }
+    /* line 247, ../foundation/scss/foundation/components/_buttons.scss */
+    button.disabled.info, button[disabled].info, .button.disabled.info, .button[disabled].info {
+      background-color: #a0d3e8;
+      border-color: #61b6d9;
+      color: white;
+      cursor: default;
+      opacity: 0.7;
+      box-shadow: none; }
+      /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
+        background-color: #61b6d9; }
+      /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
+        color: #FFFFFF; }
+      /* line 180, ../foundation/scss/foundation/components/_buttons.scss */
+      button.disabled.info:hover, button.disabled.info:focus, button[disabled].info:hover, button[disabled].info:focus, .button.disabled.info:hover, .button.disabled.info:focus, .button[disabled].info:hover, .button[disabled].info:focus {
+        background-color: #a0d3e8; }
+
+/* line 252, ../foundation/scss/foundation/components/_buttons.scss */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+@media only screen and (min-width: 40.063em) {
+  /* line 255, ../foundation/scss/foundation/components/_buttons.scss */
+  button, .button {
+    display: inline-block; } }
+/* line 157, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .login {
   font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
   position: relative;
@@ -180,7 +750,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   margin: 0 auto;
   display: block; }
 
+<<<<<<< HEAD
 /* line 153, ../../sass/styles.scss */
+=======
+/* line 172, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .login i {
   vertical-align: middle;
   font-size: 1.5rem;
@@ -188,7 +762,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   top: 0.5rem;
   left: 0.625rem; }
 
+<<<<<<< HEAD
 /* line 165, ../../sass/styles.scss */
+=======
+/* line 184, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-box {
   width: 25rem;
   position: absolute;
@@ -196,7 +774,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   left: 50%;
   margin-left: -12.5rem; }
 
+<<<<<<< HEAD
 /* line 178, ../../sass/styles.scss */
+=======
+/* line 197, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-box input {
   width: 400px;
   height: 2.5rem;
@@ -208,7 +790,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   outline: 0;
   padding: 0.5rem 0.625rem; }
 
+<<<<<<< HEAD
 /* line 189, ../../sass/styles.scss */
+=======
+/* line 208, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-box ul {
   margin: 0;
   padding: 0;
@@ -217,17 +803,26 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   overflow: hidden;
   background: rgba(255, 255, 255, 0.9); }
 
+<<<<<<< HEAD
 /* line 197, ../../sass/styles.scss */
+=======
+/* line 216, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-box ul li {
   margin: 0;
   list-style-type: none; }
 
+<<<<<<< HEAD
 /* line 202, ../../sass/styles.scss */
+=======
+/* line 221, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-box a {
   display: block;
   padding: 2px 8px;
   color: #444; }
 
+<<<<<<< HEAD
 /* line 207, ../../sass/styles.scss */
 .search-box li:first-child a {
   padding-top: 4px; }
@@ -237,33 +832,64 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   padding-bottom: 4px; }
 
 /* line 210, ../../sass/styles.scss */
+=======
+/* line 226, ../../sass/styles.scss */
+.search-box li:first-child a {
+  padding-top: 4px; }
+
+/* line 227, ../../sass/styles.scss */
+.search-box li:nth-last-child(2) a {
+  padding-bottom: 4px; }
+
+/* line 229, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-box a:hover {
   background: #48f;
   color: white; }
 
+<<<<<<< HEAD
 /* line 215, ../../sass/styles.scss */
 .search-no-results {
   padding: 0 8px; }
 
 /* line 219, ../../sass/styles.scss */
+=======
+/* line 234, ../../sass/styles.scss */
+.search-no-results {
+  padding: 0 8px; }
+
+/* line 238, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .search-no-results {
   color: gray;
   padding: 4px 8px;
   cursor: default; }
 
+<<<<<<< HEAD
 /* line 225, ../../sass/styles.scss */
+=======
+/* line 244, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 #current-user-name {
   color: white;
   margin-left: 8px; }
 
+<<<<<<< HEAD
 /* line 230, ../../sass/styles.scss */
+=======
+/* line 249, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 h1.searchpagetitle1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 45px;
   color: white; }
 
+<<<<<<< HEAD
 /* line 236, ../../sass/styles.scss */
+=======
+/* line 255, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 h2.searchpagetitle2 {
   font-family: 'Arizonia', cursive;
   margin-top: -1rem;
@@ -271,25 +897,44 @@ h2.searchpagetitle2 {
   color: white; }
 
 @media screen and (max-width: 700px) {
+<<<<<<< HEAD
   /* line 243, ../../sass/styles.scss */
   h1.searchpagetitle1 {
     font-size: 20px; }
 
   /* line 244, ../../sass/styles.scss */
+=======
+  /* line 262, ../../sass/styles.scss */
+  h1.searchpagetitle1 {
+    font-size: 20px; }
+
+  /* line 263, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   h2.searchpagetitle2 {
     display: none;
     font-size: 15px;
     margin-top: -0.75rem; }
 
+<<<<<<< HEAD
   /* line 245, ../../sass/styles.scss */
+=======
+  /* line 264, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
   .search-box {
     width: 20rem;
     margin-left: -10rem; }
 
+<<<<<<< HEAD
   /* line 250, ../../sass/styles.scss */
   .search-box input {
     width: 20rem; } }
 /* line 255, ../../sass/styles.scss */
+=======
+  /* line 269, ../../sass/styles.scss */
+  .search-box input {
+    width: 20rem; } }
+/* line 274, ../../sass/styles.scss */
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
 .titles-of-page {
   text-align: center;
   color: white;
@@ -298,3 +943,56 @@ h2.searchpagetitle2 {
   left: 0;
   right: 0;
   text-align: center; }
+<<<<<<< HEAD
+=======
+
+/* line 285, ../../sass/styles.scss */
+.my-review-rating {
+  font-weight: normal;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  line-height: 1;
+  white-space: nowrap;
+  display: inline-block;
+  position: relative;
+  margin-bottom: auto;
+  padding: 7px 16px 9px;
+  font-size: 13px;
+  background-color: #7f7f7f;
+  color: #FFFFFF;
+  border-radius: 4px; }
+
+/* line 298, ../../sass/styles.scss */
+.my-review-buttons {
+  border-style: solid;
+  border-width: 0;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 2px;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 1rem;
+  background-color: #ffffff;
+  border-color: #cccccc;
+  color: white;
+  border-radius: 3px;
+  transition: background-color 300ms ease-out; }
+  /* line 163, ../foundation/scss/foundation/components/_buttons.scss */
+  .my-review-buttons:hover, .my-review-buttons:focus {
+    background-color: #cccccc; }
+  /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
+  .my-review-buttons:hover, .my-review-buttons:focus {
+    color: #333333; }
+>>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
