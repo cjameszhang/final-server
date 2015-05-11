@@ -3,7 +3,11 @@
 @import url(http://fonts.googleapis.com/css?family=Fredericka+the+Great);
 @import url(http://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(http://fonts.googleapis.com/css?family=Arizonia);
+<<<<<<< Updated upstream
 <<<<<<< HEAD
+=======
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+>>>>>>> Stashed changes
 /* line 5, ../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
 =======
 @import url(http://fonts.googleapis.com/css?family=Montserrat);
@@ -96,8 +100,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block; }
 
 /* line 13, ../../sass/styles.scss */
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> Stashed changes
 .course-review {
   margin: 1rem 0.5rem;
   border-radius: 4px;
@@ -109,23 +116,31 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     vertical-align: bottom; }
 
 /* line 27, ../../sass/styles.scss */
+<<<<<<< Updated upstream
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+>>>>>>> Stashed changes
 #search-wrapper {
   background: url("../images/Background-Image-Color-Overlay.jpg");
   background-repeat: cover;
   height: 100%; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 19, ../../sass/styles.scss */
+=======
+/* line 33, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 #course-details {
   background: transparent; }
-  /* line 22, ../../sass/styles.scss */
+  /* line 36, ../../sass/styles.scss */
   #course-details h1 {
     margin: 0;
     padding: 0; }
-  /* line 27, ../../sass/styles.scss */
+  /* line 41, ../../sass/styles.scss */
   #course-details #average-rating a {
     background: #888; }
+<<<<<<< Updated upstream
   /* line 31, ../../sass/styles.scss */
 =======
 /* line 33, ../../sass/styles.scss */
@@ -140,10 +155,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     background: #888; }
   /* line 45, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 45, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details a.button {
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding: 8px 16px; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 39, ../../sass/styles.scss */
   #course-details #course-details-heading {
@@ -155,18 +174,29 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     margin-top: 1rem; }
   /* line 60, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 53, ../../sass/styles.scss */
+  #course-details #course-details-heading {
+    margin-top: 1rem; }
+  /* line 60, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details #course-rating-info {
     margin-top: 1rem;
     display: flex;
     align-items: center;
     justify-content: center; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /* line 51, ../../sass/styles.scss */
+=======
+    /* line 65, ../../sass/styles.scss */
+>>>>>>> Stashed changes
     #course-details #course-rating-info a.button {
       margin: 0; }
-    /* line 52, ../../sass/styles.scss */
+    /* line 66, ../../sass/styles.scss */
     #course-details #course-rating-info #add-review {
       margin-left: 0.5rem; }
+<<<<<<< Updated upstream
   /* line 55, ../../sass/styles.scss */
 =======
     /* line 65, ../../sass/styles.scss */
@@ -177,20 +207,28 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       margin-left: 0.5rem; }
   /* line 69, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 69, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details #course-ratings {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     margin-top: 0.5rem; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /* line 65, ../../sass/styles.scss */
+=======
+    /* line 79, ../../sass/styles.scss */
+>>>>>>> Stashed changes
     #course-details #course-ratings ul {
       display: inline-block;
       margin: 0 0.5rem; }
-    /* line 66, ../../sass/styles.scss */
+    /* line 80, ../../sass/styles.scss */
     #course-details #course-ratings li {
       margin: 0; }
+<<<<<<< Updated upstream
     /* line 67, ../../sass/styles.scss */
 =======
     /* line 79, ../../sass/styles.scss */
@@ -202,29 +240,41 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
       margin: 0; }
     /* line 81, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+    /* line 81, ../../sass/styles.scss */
+>>>>>>> Stashed changes
     #course-details #course-ratings a.button {
       cursor: default;
       background: #888;
       padding: 8px 16px;
       margin-bottom: 0.5rem; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 77, ../../sass/styles.scss */
 =======
   /* line 91, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 91, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details .course-review-scoring a {
     -moz-transition: color 0.2s;
     -o-transition: color 0.2s;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
     color: #ccc; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 81, ../../sass/styles.scss */
+=======
+  /* line 95, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details .course-review-scoring a:hover {
     color: #999; }
-  /* line 82, ../../sass/styles.scss */
+  /* line 96, ../../sass/styles.scss */
   #course-details .course-review-scoring a.selected {
     color: #666; }
+<<<<<<< Updated upstream
   /* line 85, ../../sass/styles.scss */
 =======
   /* line 95, ../../sass/styles.scss */
@@ -235,10 +285,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     color: #666; }
   /* line 99, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 99, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details .course-review {
     margin: 1rem 0.5rem;
     border-radius: 4px;
     background: #eee;
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     overflow: hidden; }
     /* line 91, ../../sass/styles.scss */
@@ -247,17 +301,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     overflow: hidden; }
     /* line 106, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+    word-wrap: break-word;
+    overflow: hidden; }
+    /* line 106, ../../sass/styles.scss */
+>>>>>>> Stashed changes
     #course-details .course-review a.button {
       margin-top: 0;
       background: #888;
       cursor: default; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
     /* line 97, ../../sass/styles.scss */
+=======
+    /* line 112, ../../sass/styles.scss */
+>>>>>>> Stashed changes
     #course-details .course-review h3 {
       vertical-align: bottom; }
-  /* line 102, ../../sass/styles.scss */
+  /* line 117, ../../sass/styles.scss */
   #course-details .review-score {
     font-size: 1.5rem; }
+<<<<<<< Updated upstream
   /* line 109, ../../sass/styles.scss */
 =======
     /* line 112, ../../sass/styles.scss */
@@ -268,25 +332,86 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
     font-size: 1.5rem; }
   /* line 124, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 124, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details .review-comments input {
     background: transparent;
     margin: 0;
     outline: 0;
     border: none;
     box-shadow: none; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 117, ../../sass/styles.scss */
+=======
+  /* line 132, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   #course-details .review-comments-list {
     border-top: 1px solid #ccc;
-    margin: 4px 8px 0; }
-    /* line 120, ../../sass/styles.scss */
-    #course-details .review-comments-list div:last-child {
+    margin: 4px 8px; }
+    /* line 135, ../../sass/styles.scss */
+    #course-details .review-comments-list div {
       padding-bottom: 4px;
       border-bottom: 1px solid #ccc; }
-    /* line 125, ../../sass/styles.scss */
+    /* line 140, ../../sass/styles.scss */
     #course-details .review-comments-list div:first-child {
       padding-top: 4px; }
+  /* line 147, ../../sass/styles.scss */
+  #course-details .review-comment {
+    margin-bottom: 4px;
+    word-wrap: break-word; }
 
+/* line 348, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-version {
+  font-family: "/5.5.1/"; }
+
+/* line 352, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-small {
+  font-family: "/only screen/";
+  width: 0; }
+
+/* line 357, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-small-only {
+  font-family: "/only screen and (max-width: 40em)/";
+  width: 0; }
+
+/* line 362, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-medium {
+  font-family: "/only screen and (min-width:40.063em)/";
+  width: 40.063em; }
+
+/* line 367, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-medium-only {
+  font-family: "/only screen and (min-width:40.063em) and (max-width:64em)/";
+  width: 40.063em; }
+
+/* line 372, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-large {
+  font-family: "/only screen and (min-width:64.063em)/";
+  width: 64.063em; }
+
+/* line 377, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-large-only {
+  font-family: "/only screen and (min-width:64.063em) and (max-width:90em)/";
+  width: 64.063em; }
+
+/* line 382, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-xlarge {
+  font-family: "/only screen and (min-width:90.063em)/";
+  width: 90.063em; }
+
+/* line 387, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-xlarge-only {
+  font-family: "/only screen and (min-width:90.063em) and (max-width:120em)/";
+  width: 90.063em; }
+
+/* line 392, ../foundation/scss/foundation/components/_global.scss */
+meta.foundation-mq-xxlarge {
+  font-family: "/only screen and (min-width:120.063em)/";
+  width: 120.063em; }
+
+<<<<<<< Updated upstream
 /* line 138, ../../sass/styles.scss */
 =======
   /* line 132, ../../sass/styles.scss */
@@ -354,6 +479,8 @@ meta.foundation-mq-xxlarge {
   font-family: "/only screen and (min-width:120.063em)/";
   width: 120.063em; }
 
+=======
+>>>>>>> Stashed changes
 /* line 397, ../foundation/scss/foundation/components/_global.scss */
 meta.foundation-data-attribute-namespace {
   font-family: false; }
@@ -734,7 +861,10 @@ button::-moz-focus-inner {
   button, .button {
     display: inline-block; } }
 /* line 157, ../../sass/styles.scss */
+<<<<<<< Updated upstream
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+>>>>>>> Stashed changes
 .login {
   font-family: 'helvetica neue', helvetica, arial, 'lucida grande', sans-serif;
   position: relative;
@@ -750,11 +880,15 @@ button::-moz-focus-inner {
   margin: 0 auto;
   display: block; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 153, ../../sass/styles.scss */
 =======
 /* line 172, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 172, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .login i {
   vertical-align: middle;
   font-size: 1.5rem;
@@ -762,11 +896,15 @@ button::-moz-focus-inner {
   top: 0.5rem;
   left: 0.625rem; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 165, ../../sass/styles.scss */
 =======
 /* line 184, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 184, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box {
   width: 25rem;
   position: absolute;
@@ -774,11 +912,15 @@ button::-moz-focus-inner {
   left: 50%;
   margin-left: -12.5rem; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 178, ../../sass/styles.scss */
 =======
 /* line 197, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 197, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box input {
   width: 400px;
   height: 2.5rem;
@@ -790,11 +932,15 @@ button::-moz-focus-inner {
   outline: 0;
   padding: 0.5rem 0.625rem; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 189, ../../sass/styles.scss */
 =======
 /* line 208, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 208, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box ul {
   margin: 0;
   padding: 0;
@@ -803,34 +949,47 @@ button::-moz-focus-inner {
   overflow: hidden;
   background: rgba(255, 255, 255, 0.9); }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 197, ../../sass/styles.scss */
 =======
 /* line 216, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 216, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box ul li {
   margin: 0;
   list-style-type: none; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 202, ../../sass/styles.scss */
 =======
 /* line 221, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 221, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box a {
   display: block;
   padding: 2px 8px;
   color: #444; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 207, ../../sass/styles.scss */
+=======
+/* line 226, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box li:first-child a {
   padding-top: 4px; }
 
-/* line 208, ../../sass/styles.scss */
+/* line 227, ../../sass/styles.scss */
 .search-box li:nth-last-child(2) a {
   padding-bottom: 4px; }
 
+<<<<<<< Updated upstream
 /* line 210, ../../sass/styles.scss */
 =======
 /* line 226, ../../sass/styles.scss */
@@ -843,10 +1002,14 @@ button::-moz-focus-inner {
 
 /* line 229, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 229, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-box a:hover {
   background: #48f;
   color: white; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 215, ../../sass/styles.scss */
 .search-no-results {
@@ -860,36 +1023,55 @@ button::-moz-focus-inner {
 
 /* line 238, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 234, ../../sass/styles.scss */
+.search-no-results {
+  padding: 0 8px; }
+
+/* line 238, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .search-no-results {
   color: gray;
   padding: 4px 8px;
   cursor: default; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 225, ../../sass/styles.scss */
 =======
 /* line 244, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 244, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 #current-user-name {
   color: white;
   margin-left: 8px; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 230, ../../sass/styles.scss */
 =======
 /* line 249, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 249, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 h1.searchpagetitle1 {
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
   font-size: 45px;
   color: white; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 /* line 236, ../../sass/styles.scss */
 =======
 /* line 255, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+/* line 255, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 h2.searchpagetitle2 {
   font-family: 'Arizonia', cursive;
   margin-top: -1rem;
@@ -897,6 +1079,7 @@ h2.searchpagetitle2 {
   color: white; }
 
 @media screen and (max-width: 700px) {
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 243, ../../sass/styles.scss */
   h1.searchpagetitle1 {
@@ -910,20 +1093,32 @@ h2.searchpagetitle2 {
 
   /* line 263, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 262, ../../sass/styles.scss */
+  h1.searchpagetitle1 {
+    font-size: 20px; }
+
+  /* line 263, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   h2.searchpagetitle2 {
     display: none;
     font-size: 15px;
     margin-top: -0.75rem; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 245, ../../sass/styles.scss */
 =======
   /* line 264, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 264, ../../sass/styles.scss */
+>>>>>>> Stashed changes
   .search-box {
     width: 20rem;
     margin-left: -10rem; }
 
+<<<<<<< Updated upstream
 <<<<<<< HEAD
   /* line 250, ../../sass/styles.scss */
   .search-box input {
@@ -935,6 +1130,12 @@ h2.searchpagetitle2 {
     width: 20rem; } }
 /* line 274, ../../sass/styles.scss */
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+  /* line 269, ../../sass/styles.scss */
+  .search-box input {
+    width: 20rem; } }
+/* line 274, ../../sass/styles.scss */
+>>>>>>> Stashed changes
 .titles-of-page {
   text-align: center;
   color: white;
@@ -943,8 +1144,11 @@ h2.searchpagetitle2 {
   left: 0;
   right: 0;
   text-align: center; }
+<<<<<<< Updated upstream
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> Stashed changes
 
 /* line 285, ../../sass/styles.scss */
 .my-review-rating {
@@ -995,4 +1199,7 @@ h2.searchpagetitle2 {
   /* line 169, ../foundation/scss/foundation/components/_buttons.scss */
   .my-review-buttons:hover, .my-review-buttons:focus {
     color: #333333; }
+<<<<<<< Updated upstream
 >>>>>>> d54aa95d3c213edc08814cc5982fcb42b5b845dd
+=======
+>>>>>>> Stashed changes

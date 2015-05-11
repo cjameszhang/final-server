@@ -228,6 +228,7 @@ review.comments = req.body.comments || [];
 review.rating = req.body.rating;
 review.title = req.body.title;
 review.upvotes = req.body.upvotes || [];
+review.body = req.body.body;
 review.downvotes = req.body.downvotes || [];
 /*
           var paramsToChange = Object.keys(review);
