@@ -1,5 +1,5 @@
 // js/services/todos.js
-var baseUrl = 'http://localhost:3000';
+var baseUrl = 'http://45.55.239.161:3000';
 angular.module('appServices', [])
   .factory('UserService', function ($http) {
     return restFunctions($http, 'users');
